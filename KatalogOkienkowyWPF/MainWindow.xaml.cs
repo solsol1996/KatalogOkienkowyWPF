@@ -30,6 +30,11 @@ namespace KatalogOkienkowyWPF
             };
             EtykietaLiczbaProduktow.Text = $"Liczba produktów: {produkty.Count}";
             WartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
+
+            TextBlock dopisek = new TextBlock();
+            dopisek.Text = "To zostało dodane bezpośrednie w kodzie C#:";
+            dopisek.FontSize = 14;
+            GlownyStackPanel.Children.Add(dopisek);
         }
     }
 }
