@@ -21,7 +21,7 @@ namespace KatalogOkienkowyWPF
             InitializeComponent();
             List < Produkt > produkty = new List<Produkt>
             {
-                new Produkt("Procesor Intel Core i9", 1500.00, "Procesory", 10),
+                new Produkt("Procesor Intel Core i9", 1500.01, "Procesory", 10),
                 new Produkt("Karta Graficzna RTX 3080", 4000.00, "Karty Graficzne", 5),
                 new Produkt("Płyta Główna ASUS ROG Strix Z590-E", 1200.00, "Płyty Główne", 8),
                 new Produkt("Pamięć DDR4 32GB", 400.00, "Pamięci", 20),
@@ -29,6 +29,7 @@ namespace KatalogOkienkowyWPF
 
             };
             EtykietaLiczbaProduktow.Text = $"Liczba produktów: {produkty.Count}";
+            WartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
         }
     }
 }
