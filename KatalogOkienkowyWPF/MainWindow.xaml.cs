@@ -28,8 +28,8 @@ namespace KatalogOkienkowyWPF
                 new Produkt("Dysk SSD Samsung 980 PRO", 500.00, "Dyski SSD", 15)
 
             };
-            EtykietaLiczbaProduktow.Text = $"Liczba produktów: {produkty.Count}";
-            WartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
+            EtykietaLiczbaProduktow.Text = produkty.Count.ToString();
+            EtykietaWartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
 
             TextBlock dopisek = new TextBlock();
             dopisek.Text = "To zostało dodane bezpośrednie w kodzie C#:";
