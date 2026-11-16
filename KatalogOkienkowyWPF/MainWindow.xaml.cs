@@ -19,22 +19,25 @@ namespace KatalogOkienkowyWPF
         public MainWindow()
         {
             InitializeComponent();
-            List < Produkt > produkty = new List<Produkt>
+
+            //stwórz listę kilku produktów - części komputerowych
+            List<Produkt> produkty = new List<Produkt>
             {
-                new Produkt("Procesor Intel Core i9", 1500.01, "Procesory", 10),
-                new Produkt("Karta Graficzna RTX 3080", 4000.00, "Karty Graficzne", 5),
-                new Produkt("Płyta Główna ASUS ROG Strix Z590-E", 1200.00, "Płyty Główne", 8),
-                new Produkt("Pamięć DDR4 32GB", 400.00, "Pamięci", 20),
-                new Produkt("Dysk SSD Samsung 980 PRO", 500.00, "Dyski SSD", 15)
-
+                new Produkt("Procesor Intel Core i9", 1500.00, "Procesory", 10),
+                new Produkt("Karta graficzna NVIDIA GeForce RTX 3080", 4000.00, "Karty graficzne", 5),
+                new Produkt("Płyta główna ASUS ROG Strix Z590-E", 1200.00, "Płyty główne", 8),
+                new Produkt("Pamięć RAM Corsair Vengeance LPX 16GB", 400.00, "Pamięci RAM", 20),
+                new Produkt("Dysk SSD Samsung 970 EVO Plus 1TB", 600.00, "Dyski SSD", 15)
             };
-            EtykietaLiczbaProduktow.Text = produkty.Count.ToString();
-            EtykietaWartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
 
-            TextBlock dopisek = new TextBlock();
-            dopisek.Text = "";
-            dopisek.FontSize = 14;
-            GlownyStackPanel.Children.Add(dopisek);
+            EtykietaLiczbaProduktow.Text = produkty.Count.ToString();
+            EtykietaWartoscMagazynu.Text = $"{Produkt.ObliczWartoscMagazynu(produkty):f2} zł";
+
+            //TextBlock dopisek = new TextBlock();
+            //dopisek.Text = "To zostało dodane bezpośrednio w kodzie C#";
+            //dopisek.FontSize = 14;
+            //stackpanel musi miec x:Name żeby to zadziałało
+            //GlownyStackPanel.Children.Add(dopisek);
         }
     }
 }
