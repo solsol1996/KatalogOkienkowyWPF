@@ -32,7 +32,7 @@ namespace KatalogOkienkowyWPF
             EtykietaWartoscMagazynu.Text = $"Wartość magazynu: {Produkt.ObliczWartoscMagazynu(produkty)} zł";
 
             TextBlock dopisek = new TextBlock();
-            dopisek.Text = "To zostało dodane bezpośrednie w kodzie C#:";
+            dopisek.Text = "";
             dopisek.FontSize = 14;
             GlownyStackPanel.Children.Add(dopisek);
         }
